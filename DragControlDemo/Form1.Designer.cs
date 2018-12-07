@@ -1,4 +1,4 @@
-﻿namespace DragControlDemo
+﻿namespace CustomUserControl
 {
     partial class Form1
     {
@@ -28,17 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.dragControl1 = new CustomUserControl.DragControl();
+            this.elipseControl1 = new DragControlDemo.ElipseControl();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // panel1
+            // elipseControl1
             // 
-            this.panel1.BackColor = System.Drawing.Color.DodgerBlue;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(642, 44);
-            this.panel1.TabIndex = 0;
+            this.elipseControl1.CornerRadius = 20;
+            this.elipseControl1.TargetControl = this.button1;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.DodgerBlue;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button1.ForeColor = System.Drawing.Color.Snow;
+            this.button1.Location = new System.Drawing.Point(224, 209);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(131, 50);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Login";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // Form1
             // 
@@ -46,7 +58,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.ClientSize = new System.Drawing.Size(642, 315);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -56,8 +68,9 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
+        private DragControl dragControl1;
+        private DragControlDemo.ElipseControl elipseControl1;
+        private System.Windows.Forms.Button button1;
     }
 }
 

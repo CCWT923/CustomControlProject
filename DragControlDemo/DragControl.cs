@@ -3,7 +3,7 @@ using System.ComponentModel;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
-namespace DragControlDemo
+namespace CustomUserControl
 {
     class DragControl  : Component
     {

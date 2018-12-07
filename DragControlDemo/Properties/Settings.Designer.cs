@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DragControlDemo.Properties
+namespace CustomUserControl.Properties
 {
 
 
